@@ -1,6 +1,8 @@
 from random import randint
 from random import choice
+cards=[2,3,4,5,6,7,8,9,10,10,10,10,11]
 def draw_card():
+    
     """Draws a random card from Deck"""
     cards=[2,3,4,5,6,7,8,9,10,10,10,10,11]
     card_drawn=choice(cards)
@@ -19,5 +21,12 @@ while loop==True:
         loop=False
 
     
+def calculate_cards_score(computer_cards):
+    
+    if sum(computer_cards)<16 :
+        computer_cards.append(choice(cards))   
+    if 11 in computer_cards and sum(computer_cards)>21:
+        
+
    
 
