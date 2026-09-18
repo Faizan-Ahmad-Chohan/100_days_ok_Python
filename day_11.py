@@ -1,21 +1,25 @@
 from random import randint
 from random import choice 
-from functions import draw_card , calculate_score
+from functions import draw_card,calculate_score
+
+permition=input("If you want to play game  type 'y'  or type 'n' to exit : ")
+if permition=='y':
+    users_cards=[]
+    computer_cards=[]
+    for i in range(2):
+             users_cards.append(draw_card())
+             computer_cards.append(draw_card())
+            
+    print(f"Your cards are: {users_cards}")
+    print(f"Computer's first card is : {computer_cards[0]}")         
+            
+ 
 
 
-users_cards=[]
-computer_cards=[]
-loop=True
-while True:
-    users_cards.append(draw_card())
-    computer_cards.append(draw_card())
-    users_cards.append(draw_card())
-    computer_cards.append(draw_card())
-    print(f" users cards are : {users_cards}")
-    print(f" computer cards are : {computer_cards}")
-    print(f"total of user is  {calculate_score(users_cards)}")
-    print(f"total of user is  {calculate_score(computer_cards)}")
+       
+        
 
+ 
 
 
 
