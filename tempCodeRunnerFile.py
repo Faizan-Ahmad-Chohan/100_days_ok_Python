@@ -1,1 +1,1 @@
-from random import choice
+while True:
