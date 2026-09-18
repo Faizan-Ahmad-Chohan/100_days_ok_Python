@@ -22,6 +22,14 @@ def calculate_score(cards):
         sum+=elements
 
     return sum
+def ace_case(input_cards ):
+    for crd in input_cards:
+        if crd==11 and calculate_score(input_cards)>21:
+            crd=1
+            return crd 
+
+            
+
 
 
 
