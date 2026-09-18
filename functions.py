@@ -20,9 +20,8 @@ def calculate_score(cards):
     for elements in cards:
 
         sum+=elements
-        
+
     return sum
-def win_case():
 
 
 
