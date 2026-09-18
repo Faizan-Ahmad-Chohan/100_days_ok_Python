@@ -7,8 +7,8 @@ if permition=='y':
     users_cards=[]
     computer_cards=[]
     for i in range(2):
-             users_cards.append(draw_card())
-             computer_cards.append(draw_card())
+            users_cards.append(draw_card())
+            computer_cards.append(draw_card())
           
 
     while True:     
@@ -19,7 +19,7 @@ if permition=='y':
             users_cards.append(draw_card()) 
 
         if calculate_score(computer_cards)<16:
-             computer_cards.append(draw_card())
+            computer_cards.append(draw_card())
                
             
  
