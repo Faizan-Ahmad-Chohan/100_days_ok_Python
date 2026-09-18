@@ -1,6 +1,6 @@
 from random import randint
 from random import choice 
-from functions import draw_card,calculate_score
+from functions import draw_card,calculate_score,ace_case
 
 permition=input("If you want to play game  type 'y'  or type 'n' to exit : ").lower()
 if permition=='y':
@@ -20,8 +20,11 @@ if permition=='y':
         if more_card=='n':
                 while calculate_score(computer_cards)<=16:
                     computer_cards.append(draw_card())
-                calculate_score(users_cards)   
-                calculate_score(computer_cards)
+        
+        if ace_case(users_cards or computer_cards): 
+              
+        
+        
               
 
 
