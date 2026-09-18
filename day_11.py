@@ -11,9 +11,10 @@ if permition=='y':
              computer_cards.append(draw_card())
              print(f"Your cards are: {users_cards}")
              print(f"Computer's first card is : {computer_cards[0]}")  
-    while True:      
-         
-        more_card=input("If you want to draw more cards \" yes 'y',no 'n'\"")  
+
+    while True:     
+        more_card=input("If you want to draw more cards \" yes 'y',no 'n'\"") 
+        users_cards.append(draw_card()) 
             
             
  
