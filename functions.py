@@ -24,11 +24,18 @@ def calculate_score(cards):
     return sum
 def ace_case(input_cards ):
     for crd in input_cards:
-        if crd==11 and calculate_score(input_cards)>21:
-            crd=1
-            return crd 
-
-            
+         if crd==11:
+            if calculate_score(input_cards)<=21:
+                return calculate_score(input_cards)
+                
+            if calculate_score(input_cards)==22 :
+                crd=10
+                return calculate_score(input_cards)
+            if calculate_score>22 : 
+                crd=1
+                return calculate_score(input_cards)
+                
+         
 
 
 

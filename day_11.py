@@ -17,11 +17,15 @@ if permition=='y':
         more_card=input("If you want to draw more cards \" yes 'y',no 'n'\"").lower()
         if more_card=='y': 
             users_cards.append(draw_card()) 
-        if more_card=='n':
-                while calculate_score(computer_cards)<=16:
-                    computer_cards.append(draw_card())
         
-        if ace_case(users_cards or computer_cards): 
+        computers_total=calculate_score(computer_cards)
+        while  computers_total <=16:
+            computer_cards.append(draw_card())
+            if ace_case(computer_cards):
+                computers_total=ace_case(computer_cards)
+        print(computers_total)
+       
+             
               
         
         
