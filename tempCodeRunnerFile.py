@@ -1,1 +1,1 @@
- if (index_total <= (len(alphabets)-1)) and index_total>=0:
+from random import choice
