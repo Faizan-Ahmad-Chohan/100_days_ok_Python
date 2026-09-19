@@ -28,15 +28,17 @@ def ace_case(input_cards ):
             if calculate_score(input_cards)<=21:
                 return input_cards
                 
-            if calculate_score(input_cards)==22 :
+            elif calculate_score(input_cards)==22 :
                 crd=10
                 return input_cards
-            if calculate_score>22 : 
+            elif calculate_score>22 : 
                 crd=1
                 return  input_cards
         return input_cards        
          
-
+def winner(cards_of_user,cards_of_computer):
+    calculate_score(cards_of_user)
+    calculate_score(cards_of_computer)
 
 
 
