@@ -15,6 +15,9 @@ if permition=='y':
         more_card=input("Do you want to draw more cards 'y' ,'n': ")
         user_score=calculate_score(users_cards)
         computer_score=calculate_score(computer_cards)
+        if 11 in computer_cards:
+             ace_case(computer_cards)
+        
         if more_card=='y':
             users_cards.append(draw_card())
         if calculate_score(computer_cards)<16:
