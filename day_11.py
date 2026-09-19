@@ -32,12 +32,30 @@ def draw_card():
     card_drawn=choice(cards)
     return card_drawn
 
+def winner(u_cards,c_cards):
+    if user_score>computer_score and user_score<=21:
+            print(f" You have won the game with cards :{u_cards}")
+            print(f" Computer's cards were :{c_cards}")
+    if user_score<computer_score and computer_score<=21:
+                print(f" You have lost the game with cards :{u_cards}")
+                print(f" Computer's cards were :{c_cards}")
+    if user_score==computer_score and user_score<=21 and computer_score<=21:
+            print(f" Your game is draw in draw  with cards :{u_cards}")
+            print(f" Computer's cards were :{c_cards}")
+
 
 
 print(blackjack_logo)
+
 replay_loop=True
+
 while replay_loop==True:
     permition=input("If you want to play game  type 'y'  or type 'n' to exit : ").lower()
+    if permition not in ('y','n'):
+             print("Please enter Valid input to Proceed. 'y' or 'n'")
+             permition=input("If you want to play game  type 'y'  or type 'n' to exit : ").lower()
+
+         
     if permition=='y':
         users_cards=[]
         computer_cards=[]
@@ -59,6 +77,11 @@ while replay_loop==True:
             print(f"Your cards are : {users_cards}")
             print(f"Computer's first card is : {computer_cards[0]}")
             more_card=input("Do you want to draw more cards 'y' ,'n': ")
+
+            if more_card not in ('y','n'):
+                print(" Kindly type a Valid  key 'y','n'")
+                more_card=input("Do you want to draw more cards 'y' ,'n': ")
+
             if more_card=='y':
                         users_cards.append(draw_card())
             
@@ -72,16 +95,8 @@ while replay_loop==True:
                 computer_cards=ace_case(users_cards)
             if more_card=='n' :
                 u_loop=False
-        if user_score>computer_score and user_score<=21:
-                print(f" You have won the game with cards :{users_cards}")
-                print(f" Computer's cards were :{computer_cards}")
-        if user_score<computer_score and computer_score<=21:
-                    print(f" You have lost the game with cards :{users_cards}")
-                    print(f" Computer's cards were :{computer_cards}")
-        if user_score==computer_score and user_score<=21 and computer_score<=21:
-                print(f" Your game is draw in draw  with cards :{users_cards}")
-                print(f" Computer's cards were :{computer_cards}")
-
+        
+        print(winner(users_cards,computer_cards))
         
                 
                 
