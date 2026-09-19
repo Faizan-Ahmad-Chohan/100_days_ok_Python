@@ -1,8 +1,42 @@
-from random import randint
 from random import choice 
-from functions import draw_card,calculate_score,ace_case
-___=True
-while ___==True:
+from logo import blackjack_logo
+
+
+def ace_case(input_cards ):
+    for crd in input_cards:
+        
+        if calculate_score(input_cards)<=21:
+            return input_cards
+            
+        
+        if calculate_score>22 : 
+            crd=1
+            return  input_cards
+
+
+
+def calculate_score(cards):
+    """ print Total of persons cards"""
+    sum=0
+    for elements in cards:
+
+        sum+=elements
+
+    return sum
+
+
+def draw_card():
+    
+    """Draws a random card from Deck"""
+    cards=[2,3,4,5,6,7,8,9,10,10,10,10,11]
+    card_drawn=choice(cards)
+    return card_drawn
+
+
+
+print(blackjack_logo)
+replay_loop=True
+while replay_loop==True:
     permition=input("If you want to play game  type 'y'  or type 'n' to exit : ").lower()
     if permition=='y':
         users_cards=[]
@@ -10,33 +44,34 @@ while ___==True:
         for i in range(2):
                 users_cards.append(draw_card())
                 computer_cards.append(draw_card())
-        __=True
-        while __==True:
+        c_loop=True
+        while c_loop==True:
             if calculate_score(computer_cards)<16:
                 computer_cards.append(draw_card())
             computer_score=calculate_score(computer_cards)
             if 11 in computer_cards:
                 computer_cards=ace_case(computer_cards)
             if calculate_score(computer_cards)>16:
-                __=False
+                c_loop=False
 
-        _ =True
-        while _==True  :   
+        u_loop =True
+        while u_loop==True  :   
             print(f"Your cards are : {users_cards}")
             print(f"Computer's first card is : {computer_cards[0]}")
             more_card=input("Do you want to draw more cards 'y' ,'n': ")
             if more_card=='y':
                         users_cards.append(draw_card())
-            if calculate_score(computer_cards)<16:
-                        computer_cards.append(draw_card())
+            
 
             user_score=calculate_score(users_cards)
+            if user_score>21:
+                  break
 
             
             if 11 in users_cards:
                 computer_cards=ace_case(users_cards)
             if more_card=='n' :
-                _=False
+                u_loop=False
         if user_score>computer_score and user_score<=21:
                 print(f" You have won the game with cards :{users_cards}")
                 print(f" Computer's cards were :{computer_cards}")
