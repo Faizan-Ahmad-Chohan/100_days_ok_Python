@@ -1,4 +1,10 @@
 import random
+logo_for_number_guesser="""                            
+   ____  __  ______ ___  / /_  ___  _____   ____ ___  _____  _____________  _____
+  / __ \/ / / / __ `__ \/ __ \/ _ \/ ___/  / __ `/ / / / _ \/ ___/ ___/ _ \/ ___/
+ / / / / /_/ / / / / / / /_/ /  __/ /     / /_/ / /_/ /  __(__  |__  )  __/ /    
+/_/ /_/\__,_/_/ /_/ /_/_.___/\___/_/      \__, /\__,_/\___/____/____/\___/_/     
+                                         /____/                                  """
 def difficulty_selection():
     type=input("Chose a difficulty , 'easy' ,'difficult','hard' : ").lower()
     loop_exit=True
@@ -37,7 +43,9 @@ def number_gusser(no_of_attempts):
         elif guess<number:
             print(f" Too low\n Guess again ")
             no_of_attempts -= 1
-
+print(logo_for_number_guesser)
+attempts=difficulty_selection()
+number_gusser(attempts)
 
 
 
