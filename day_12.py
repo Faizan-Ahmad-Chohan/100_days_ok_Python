@@ -28,12 +28,11 @@ def difficulty_selection():
 
 def number_gusser(no_of_attempts):
     number=random.randint(1,100)
-    print(number)
     while no_of_attempts>0:
         print(f" You have {no_of_attempts} attempts left to guess the number. ")
         guess=int(input("Guess a number : "))
         if guess==number:
-            print(" You Nailed it \n Whoo You made it !!!!")
+            print(" You Nailed it \n Whoo You made it .Thats the right number  !!!!")
             break
 
         elif guess>number:
