@@ -26,6 +26,7 @@ def difficulty_selection():
             print("Choose  avRelevant Option ")
             type=input("Chose a difficulty , 'easy' ,'difficult','hard'").lower()
 
+
 def number_gusser(no_of_attempts):
     number=random.randint(1,100)
     while no_of_attempts>0:
@@ -42,7 +43,10 @@ def number_gusser(no_of_attempts):
         elif guess<number:
             print(f" Too low\n Guess again ")
             no_of_attempts -= 1
+    if no_of_attempts<=0:
+         print("you are out of attempts . \nyou lose.!")
 print(logo_for_number_guesser)
+print("Welcome to Random Number number.")
 attempts=difficulty_selection()
 number_gusser(attempts)
 
