@@ -34,6 +34,7 @@ def number_gusser(no_of_attempts):
         guess=int(input("Guess a number : "))
         if guess==number:
             print(" You Nailed it \n Whoo You made it .Thats the right number  !!!!")
+            input()
             break
 
         elif guess>number:
@@ -45,6 +46,7 @@ def number_gusser(no_of_attempts):
             no_of_attempts -= 1
     if no_of_attempts<=0:
          print("you are out of attempts . \nyou lose.!")
+         input()
 print(logo_for_number_guesser)
 print("Welcome to Random Number number.")
 attempts=difficulty_selection()
