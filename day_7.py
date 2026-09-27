@@ -1,6 +1,4 @@
 import random 
-import hangmanart
-import hangmanwords
 from hangmanart import stages
 from hangmanwords import words
 from logo import logo
