@@ -6,7 +6,8 @@ def person_slector():
 
 
 no_of_count=0
-while True:
+cond=True
+while cond:
     print(high_low_logo)
     person_1=person_slector()
     print(f"\nCompare a:  {person_1["name"]  }, a {person_1["description"]} ,from {person_1["country"]}\n ")
@@ -15,9 +16,17 @@ while True:
     print(f"Against b : {person_2["name"]  } , a {person_2["description"]}, from { person_2["country"] }")
     user_choice=input("Who has more followers ? Guess  'A','B' : ").lower()
     if user_choice=='a'or user_choice=='b':
-        if person_1["follower_count"]>person_2["follower_count"]:
+        if user_choice=='a' and  person_1["follower_count"]>=person_2["follower_count"]:
             no_of_count+=1
             print("\n",no_of_count)
+        elif user_choice=='b'and person_2["follower_count"]>= person_1["follower_count"]:
+            no_of_count+=1
+            print("\n",no_of_count)
+        else : 
+            
+            print(high_low_logo)
+            print(f"Sorry ,That was Wrong . Final Score {no_of_count}")
+            cond=False
 
 
 
