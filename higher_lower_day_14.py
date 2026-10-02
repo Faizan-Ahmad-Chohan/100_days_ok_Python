@@ -5,18 +5,23 @@ def person_slector():
     return(choice(game_data)) 
 
 
+no_of_count=0
+while True:
+    print(high_low_logo)
+    person_1=person_slector()
+    print(f"\nCompare a:  {person_1["name"]  }, a {person_1["description"]} ,from {person_1["country"]}\n ")
+    print(vs_logo,"\n")
+    person_2=person_slector()
+    print(f"Against b : {person_2["name"]  } , a {person_2["description"]}, from { person_2["country"] }")
+    user_choice=input("Who has more followers ? Guess  'A','B' : ").lower()
+    if user_choice=='a'or user_choice=='b':
+        if person_1["follower_count"]>person_2["follower_count"]:
+            no_of_count+=1
+            print("\n",no_of_count)
 
-print(high_low_logo)
-person_1=person_slector()
-print(f"\nCompare a:  {person_1["name"]  }, a {person_1["description"]} ,from {person_1["country"]}\n ")
-print(vs_logo,"\n")
-person_2=person_slector()
-print(f"Against b : {person_2["name"]  } , a {person_2["description"]}, from { person_2["country"] }")
 
 
 
+  
 
 
-
-
- 
