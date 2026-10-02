@@ -6,11 +6,13 @@ def person_slector():
 
 
 no_of_count=0
-cond=True
-while cond:
+loop_variable=True
+while loop_variable:
     print(high_low_logo)
+    if no_of_count>=1:
+        print(f"You are right, current score is: {no_of_count}")
     person_1=person_slector()
-    print(f"\nCompare a:  {person_1["name"]  }, a {person_1["description"]} ,from {person_1["country"]}\n ")
+    print(f"\nCompare a:  {person_1["name"]  }, a {person_1["description"]} ,from {person_1["country"]} ")
     print(vs_logo,"\n")
     person_2=person_slector()
     print(f"Against b : {person_2["name"]  } , a {person_2["description"]}, from { person_2["country"] }")
@@ -21,12 +23,12 @@ while cond:
             print("\n",no_of_count)
         elif user_choice=='b'and person_2["follower_count"]>= person_1["follower_count"]:
             no_of_count+=1
-            print("\n",no_of_count)
+            print("your score is:",no_of_count)
         else : 
-            
+
             print(high_low_logo)
             print(f"Sorry ,That was Wrong . Final Score {no_of_count}")
-            cond=False
+            loop_variable=False
 
 
 
