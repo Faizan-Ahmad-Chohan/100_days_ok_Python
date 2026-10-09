@@ -1,5 +1,6 @@
 from logo import calculator
 
+
 def sum(n1,n2):
     return  n1 + n2
 def subtract(n1,n2):
@@ -16,6 +17,8 @@ function_dictionary={
 
 } 
 print(calculator)
+
+
 def calculator_function():
     n1=float(input("Enter  number : "))
     count=0
@@ -29,7 +32,5 @@ def calculator_function():
         further_calculations=input(f"Write 'y' for continuing calculating with {n1} or Type 'n'to stop  :  ")
         if further_calculations =='n':
             count+=1
-            
 
-            
 calculator_function()
