@@ -4,13 +4,15 @@ coffee=100
 total_cash=0.0
 def money_count():
     print("-----Enter how much tokens you have, 1,2,3,4...")
-    fiftys=input("how much tokent of rupees'50' :")
-    hundreds=input("how much tokent of rupees'100' :")
-    hun_twenties=input("how much tokent of rupees '120' :").lower()
+    fiftys=int(input("how much tokent of rupees'50' :"))
+    hundreds=int(input("how much tokent of rupees'100' :"))
+    hun_twenties=int(input("how much tokent of rupees '120' :").lower())
     result= (fiftys*50)+(hundreds*100)+(hun_twenties*120)
+    print(result)
     return result
 
 def capiccino(amount):
+    global milk,water,coffee,total_cash
     price_cap=200
     if amount==price_cap or amount>price_cap :
         print("Here is your capiccino , enjoy ")
@@ -25,7 +27,8 @@ def capiccino(amount):
 
 
 def latee(amount):
-    price_lat=2100
+    global milk,water,coffee,total_cash
+    price_lat=210
     if amount==price_lat or amount>price_lat :
             print("Here is your latee , enjoy ")
             milk-=40
@@ -37,6 +40,8 @@ def latee(amount):
     elif amount<price_lat:
             print("Not Enough money. ")
 def espresso(amount):
+    global milk,water,coffee,total_cash
+
     price_esp=80
     if amount==price_esp or amount>price_esp :
             print("Here is your espresso , enjoy ")
@@ -80,4 +85,9 @@ def terminal():
             order_dicctionary[prp](mon)
 
 
-terminal()
+
+srt=input("Write 'start' to turn on machine :'").lower()
+if srt=='start':
+    loop_breaker=True
+    while loop_breaker:
+        terminal()
