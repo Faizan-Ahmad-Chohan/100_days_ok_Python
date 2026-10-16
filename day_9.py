@@ -1,7 +1,7 @@
 from logo import auction_bid
 print(auction_bid)
 bid_dictionary={}
-person_cheak=input("Is there any Bidder : ").lower()
+person_cheak=input("Is there any Bidder 'yes', 'no' : ").lower()
 
 while person_cheak=='yes':
     bidder_name=input(" Whats your name : ").upper()
