@@ -1,7 +1,0 @@
-import random
-friends=["Asad","Nomi","Zohaib","Anas","Faizan"]
-fed_bill= random.randint(0,len(friends)-1)
-print(friends[fed_bill])
-print(random.choice(friends))
-print(friends)
-print(friends[len(friends)-2])

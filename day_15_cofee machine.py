@@ -20,20 +20,20 @@ def money_count():
     print(f"You have a total of Rs {result} to order!!")
     return result
 
-def capiccino(amount):
+def cappiccino(amount):
     global milk,water,coffee,total_cash,loop_breaker
     price_cap=200
     if amount==price_cap or amount>price_cap :
         print("Here is your capiccino , enjoy ")
         milk-=50
         water-=20
-        cofee-=30
+        coffee-=30
         amount=amount-price_cap
         total_cash+=price_cap
         print(f"Remainig money :{amount}")
         print("if any more order just type any key and press enter, and n for no order anymore !")
 
-        restart=input("Do you have any more order?'y','n'").lower()
+        restart=input("Do you have any more order?'y','n' : ").lower()
         if restart=='n':
              loop_breaker=False
              print(f"Remaining Cash  Rs {mon} refunded !!")
@@ -95,7 +95,7 @@ def turn_off(mon):
 
 
 order_dicctionary={
-"capiccino" : capiccino,
+"cappiccino" : cappiccino,
 "latee" : latee,
 "espresso" : espresso,
 "report" : report,
@@ -112,9 +112,11 @@ order_dicctionary={
 
 def terminal():
         global mon
-        prp=input("What would you like to have? (espresso/latte/cappiccino):")
+        prp=input("What would you like to have? (espresso/late/cappiccino):")
         if prp in order_dicctionary.keys():
             order_dicctionary[prp](mon)
+        else:
+              print("Please enter a valid command !!\n")
 
 
 

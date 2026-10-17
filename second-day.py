@@ -1,13 +1,18 @@
 import random
-print(float(random.randrange(1,34)))
-random_cheak_for_0_to_1_decimal_alwayz=random.random()
-print(f" The ramom number is : {random_cheak_for_0_to_1_decimal_alwayz}")
-lower_limit=input("Enter lower limit : ")
-upper_limit=input("Enter uper limit :  ")
+print("number between different ranges\n")
+print("A Decimal between 0 -> 1. Fraction always ")
+number_between_0_1=random.random()
+
+print(f"\t\trandom.random() : {number_between_0_1}")
+
+print(" The the number above is totally random \n")
+print("Now try some limiting gueses \n \t lets set some uper and lower limits(boundaries), and get a random number in between")
+lower_limit=int(input("Enter lower limit : "))
+upper_limit=int(input("Enter uper limit :  "))
 
 
 
-random_number_happeniong_for_range_integer_always=random.randint(int(lower_limit),int(upper_limit))
-print(random_number_happeniong_for_range_integer_always)
+bounded_guess_in_limits=random.randint(lower_limit,upper_limit)
+print(f"The random number, which is actually in between {lower_limit}, and {upper_limit}  is:{bounded_guess_in_limits}")
 
 
