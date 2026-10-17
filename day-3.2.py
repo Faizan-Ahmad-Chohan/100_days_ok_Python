@@ -1,6 +1,6 @@
 print(" --------- Welcome to Amusement Park---------")
 
-hight=int(input(" What's Your Hihgt ? "))
+hight=int(input(" What's Your Hight ? "))
 if hight>=120:
     print("You can have ride of RollerCoster !")
     age=int(input(" Enter Your Age :"))
